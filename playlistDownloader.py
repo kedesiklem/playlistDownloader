@@ -109,13 +109,10 @@ def download_video(
         video = YouTube(url, on_progress_callback=progress_function)
 
         if audio_only:
-            # Si l'option "Télécharger seulement l'audio" est sélectionnée,
-            # nous utilisons le format audio MP4 pour télécharger uniquement l'audio.
             audio_stream = video.streams.filter(only_audio=True).first()
             if audio_stream:
                 audio_stream.download(output_path=destination_path)
                 audio_filename = audio_stream.default_filename
-                # Renommer le fichier en .mp3
                 mp3_filename = os.path.splitext(audio_filename)[0] + ".mp3"
                 os.rename(
                     os.path.join(destination_path, audio_filename),
@@ -173,7 +170,6 @@ def get_playlist_info_from_user():
     return playlist_url, download_path
 
 
-# Exemple d'utilisation :
 if __name__ == "__main__":
     playlist_url, download_path = get_playlist_info_from_user()
     main(playlist_url, download_path)
