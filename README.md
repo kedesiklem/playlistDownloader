@@ -1,6 +1,3 @@
-Bien sûr, voici le texte corrigé en ce qui concerne l'orthographe et la grammaire :
-
-```markdown
 # README - Script playlistDownloader (Python3)
 
 ## Prérequis
@@ -37,6 +34,7 @@ Bien sûr, voici le texte corrigé en ce qui concerne l'orthographe et la gramma
 ### C'est lent ! Il ne se passe rien ! Le script a planté ?
 1. La récupération du nom des vidéos peut prendre un certain temps, normalement tout s'affiche dans le terminal dans lequel vous avez lancé le script, donc gardez-le à l'œil.
 2. La fenêtre de sélection de vidéo tkinter peut se figer pendant le téléchargement, cela ne signifie pas que le script a planté (cf. 1.), je règlerai peut-être le bug si j'y pense.
+3. Les vidéos soumissent à une limitation d'âge ou nécessitant une authentification ne peuvent pas être prise en charge pour le moment, cela est dû à une limitation de pytube, si je trouve une solution, je l'implémenterai directement.
 
 ### Erreur 410 (Gone) de pytube
 
